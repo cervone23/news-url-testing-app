@@ -1,10 +1,10 @@
 """
 ## App: URL AB Beta Testing App with Streamlit
 Author: Brandon Cervone 
-Source: [Github](https://github.com/)
+Source: [Github](https://github.com/cervone23/news-url-testing-app)
 
 Description:
-This is built with Streamlit Framework and the Newspaper API.
+This is a prototype built with the Streamlit Framework and the Newspaper API.
 
 Purpose:
 Allow users to paste a URL address to find title, authors, and date published for any news publication. 
@@ -15,6 +15,9 @@ import streamlit as st
 import pandas as pd
 from newspaper import Article
 
+import errors
+
+@errors.exception_handler
 def main():
     """ URL Parse API APP with Streamlit """
 
@@ -56,4 +59,5 @@ def main():
 
 if __name__ == '__main__':
 	main()
+    
     
